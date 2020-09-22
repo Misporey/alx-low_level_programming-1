@@ -16,13 +16,13 @@ int main(void)
 	printf(",");
 	printf(" ");
 
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 46; i++)
 	{
 		next = second + first;
 		first = second;
 		second = next;
 		printf("%ld", next);
-		if (i == 49)
+		if (i == 45)
 		{
 			break;
 		}
