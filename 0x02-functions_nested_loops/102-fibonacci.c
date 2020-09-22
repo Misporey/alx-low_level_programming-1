@@ -2,7 +2,7 @@
 
 /**
  *main-prints first 50 fibbonacci numbers.
- *Return-void.
+ *Return:void.
  */
 
 int main(void)
