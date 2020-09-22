@@ -7,12 +7,12 @@
 
 int main(void)
 {
-	long long int i, first = 1, second = 2, next;
+	double i, first = 1, second = 2, next;
 
-	printf("%lld", first);
+	printf("%0.0f", first);
 	printf(",");
 	printf(" ");
-	printf("%lld", second);
+	printf("%0.0f", second);
 	printf(",");
 	printf(" ");
 
@@ -21,7 +21,7 @@ int main(void)
 		next = second + first;
 		first = second;
 		second = next;
-		printf("%lld", next);
+		printf("%0.0f", next);
 		if (i == 95)
 		{
 			break;
