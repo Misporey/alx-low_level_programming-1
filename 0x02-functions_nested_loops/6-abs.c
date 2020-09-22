@@ -2,7 +2,7 @@
 
 /**
  *_abs-prints the absolute value of an integer.
- *@int:the integer to compute its absolute value.
+ *@a:the integer to compute its absolute value.
  *Return:returns the abs value.
  *
  */
