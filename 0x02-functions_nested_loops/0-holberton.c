@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include "_putchar.c"
+#include "holberton.h"
 /**
  *main-program entry point for execution.
  *Return:0-success
