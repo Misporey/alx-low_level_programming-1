@@ -12,7 +12,12 @@ int main(void)
 
 	for (k = 1; k <= 100; k++)
 	{
-		if (k % 3 == 0 && k % 5 != 0)
+		if (k == 100)
+		{
+			printf("Buzz");
+			break;
+		}
+		else if (k % 3 == 0 && k % 5 != 0)
 		{
 			printf("Fizz");
 			printf(" ");
