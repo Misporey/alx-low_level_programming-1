@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  *_isdigit-checks if an argument supplied is a digit.
- *
+ *@c:integer to be checked.
  *Return: 1 if is digit, 0 otherwise.
  */
 
