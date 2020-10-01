@@ -9,34 +9,15 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char i, j = 0, m = 0, k, size, n, r = 0;
-/*get the size of the dest string*/
-	while (i != '\0')
+	int i, m;
+/*Get the size of the destination string.*/
+	for (i = 0; dest[i] != '\0'; i++)
+		;
+	for (m = 0; src[m] != '\0'; m++)
 	{
-		i = *(dest + j);
-		j++;
+		dest[i] = src[m];
+		i++;
 	}
-/*get size of the src string.*/
-	while (k != '\0')
-	{
-		k = *(src + m);
-		m++;
-	}
-	size = j + m;
-
-	for (n = 0; n < size; n++)
-	{
-		if (n <= j)
-		{
-			/**(dest + n) = *(dest + n);*/
-		}
-		else
-		{
-			*(dest + n) = *(src + r);
-			r++;
-		}
-	}
-	*(dest + n) = '\0';
+	dest[i] = '\0';
 	return (dest);
-
 }
