@@ -7,7 +7,6 @@
  *Return:Pointer to the cancated string.
  */
 
-
 char *_strcat(char *dest, char *src)
 {
 	char i, j = 0, m = 0, k, size, n, r = 0;
@@ -37,9 +36,7 @@ char *_strcat(char *dest, char *src)
 			r++;
 		}
 	}
-	*(dest + n) = '\n';
+	*(dest + n) = '\0';
 	return (dest);
-
-
 
 }
