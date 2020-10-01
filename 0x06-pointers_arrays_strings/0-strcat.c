@@ -37,6 +37,7 @@ char *_strcat(char *dest, char *src)
 			r++;
 		}
 	}
+	*(dest + n) = '\n';
 	return (dest);
 
 
