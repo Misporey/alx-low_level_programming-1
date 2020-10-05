@@ -10,14 +10,16 @@
 
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
+	char *pdest = (char *)dest;
+	const char *psrc =( const char*)src;
 
 	/*const char *pszSource =( const char*)src;*/
-	if ((dest != '\0') && (src != '\0'))
+	if ((pdest != '\0') && (psrc != '\0'))
 	{
 		while (n)
 		{
 			/*Copy byte by byte*/
-			*(dest++) = *(src++);
+			*(pdest++) = *(psrc++);
 			--n;
 		}
 	}
