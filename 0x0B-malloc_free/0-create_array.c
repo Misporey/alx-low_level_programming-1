@@ -22,5 +22,12 @@ char *create_array(unsigned int size, char c)
 	{
 	p[j] = c;
 	}
-	return (p);
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		return (p);
+	}
 }
