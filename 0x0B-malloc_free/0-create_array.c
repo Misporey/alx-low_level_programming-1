@@ -14,6 +14,10 @@ char *create_array(unsigned int size, char c)
 	unsigned int j = 0;
 
 	p = malloc(size);
+	if (size == 0)
+	{
+		return (NULL);
+	}
 	for (j = 0; j < size; j++)
 	{
 	p[j] = c;
