@@ -14,7 +14,14 @@ char *str_concat(char *s1, char *s2)
 
 	size = _strlen(s1);
 	size2 = _strlen(s2);
-
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+        if (s2 == NULL)
+	{
+		s2 = "";
+	}
 /*allocate memory for the full string.*/
 	memstorage = malloc(size + size2);
 	if (memstorage == NULL)
