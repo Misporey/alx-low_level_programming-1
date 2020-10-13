@@ -18,10 +18,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		s1 = "";
 	}
-        if (s2 == NULL)
+	if (s1 == NULL)
 	{
 		s2 = "";
 	}
+
 /*allocate memory for the full string.*/
 	memstorage = malloc(size + size2);
 	if (memstorage == NULL)
