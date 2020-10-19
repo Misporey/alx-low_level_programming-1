@@ -2,8 +2,8 @@
 #include "dog.h"
 
 /**
- * free_dog - funtion that frees dog
- * @d: dog to free
+ * free_dog - free a struct of type dog_t
+ * @d: instance of dog to free.
  */
 
 void free_dog(dog_t *d)
