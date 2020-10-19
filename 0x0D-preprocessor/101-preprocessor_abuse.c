@@ -7,6 +7,6 @@ int main(void)
 {
 	char c[] = "Hello, Holberton\n";
 
-	setenv("ShellVar", c, 1);
-	system("echo $ShellVar");
+	setenv("a", c, 1);
+	system("echo $a");
 }
