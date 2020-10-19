@@ -2,6 +2,39 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * _strdup - returns a pointer to space in memory containing copy of string.
+ * @s: pointer to the string.
+ * Return: Pointer to a string stored in memory.
+ */
+char *_strdup(char *s)
+{
+	char *dup;
+	unsigned int i = 0;
+	unsigned int j = 0;
+
+	if (s == NULL)
+		return (NULL);
+/*Get the length of the string.*/
+	while (s[i] != '\0')
+		i += 1;
+/*+1 to include the terminating character in size.*/
+	i++;
+
+	dup = malloc(i * sizeof(*dup));
+	if (dup == NULL)
+		return (NULL);
+	while (j < i)
+	{
+		dup[j] = s[j];
+		j++;
+	}
+	return (dup);
+}
+
+
+
+
+/**
  *new_dog - create an instance of struct dog.
  *@name:firt argument.
  *@age:second argument.
@@ -18,12 +51,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	(*newdog).name = name;
-	(*newdog).age = age;
-	(*newdog).owner = owner;
-
 	if (newdog == NULL)
 		return (NULL);
+/*Assign name element of new struct to the copy of name.*/
+	newdog->name = _strdup(name);
+	if (newdog->name == NULL)
+	{
+		return (NULL);
+	}
+/*Assgin owner element of new struct to the copy of ownwer.*/
+	newdog->owner = _strdup(owner);
+	if (newdog->owner == NULL)
+	{
+		return (NULL);
+	}
+	newdog->age = age;
 
 	return (newdog);
 }
