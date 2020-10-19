@@ -9,6 +9,7 @@
 
 void print_dog(struct dog *d)
 {
+
 	if (d == NULL)
 	{
 	}
@@ -16,12 +17,12 @@ void print_dog(struct dog *d)
 	{
 		printf("Name: (nill)");
 	}
-/*
-	if (d->age == NULL)
+
+	if (d->age <= 0)
 	{
 		printf("Age: (nil)");
 	}
-*/
+
 	if (d->owner == NULL)
 	{
 		printf("Owner: (nill)");
