@@ -1,17 +1,19 @@
-#ifndef _dog_
-#define _dog_
+#ifndef _dog
+#define _dog
+int _putchar(char c);
 /**
- *struct dog-basic struct definition.
- *@name:First member.
- *@age:Second member.
- *@owner:Third member.
- *
- *Description:Define a basic struct and assign some properties.
+ *struct dog - define a struct called dog.
+ *@name:member 1.
+ *@age:member 2.
+ *@owner:member 3.
+ *Description:define a struct and assign some properties.
  */
+
 struct dog
 {
 	char *name;
 	float age;
 	char *owner;
 };
+void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif
