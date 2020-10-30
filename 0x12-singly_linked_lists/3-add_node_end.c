@@ -18,7 +18,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	newNode->str = strdup(str);
-	newNode->len = _strlen(newNode->str);
+	newNode->len = _strlen(str);
 	newNode->next = NULL;
 /*Handle case where the size of the node is one. ie head is null*/
 	if (*head == NULL)
@@ -45,7 +45,7 @@ list_t *add_node_end(list_t **head, const char *str)
  *Return: returns the length of the string.
  */
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int p = 0;
 /*incremeant up to when the last character is NULL,\0*/
