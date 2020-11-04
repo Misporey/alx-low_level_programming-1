@@ -13,8 +13,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int i = 0;
 
 	temp->n = n;
+	temp->next = NULL;
 
-	if (temp == NULL)
+	if (temp == NULL && idx > 0)
 	{
 		free(temp);
 		return (NULL);
@@ -34,7 +35,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		navigate = navigate->next;
 		}
 	}
-	if (navigate == NULL && (idx - 1) > 0)
+	if (navigate == NULL)
 	{
 		free(navigate);
 		return (NULL);
