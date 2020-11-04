@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *print_listint-Prints all the elements of a linked list.
+ *listint_len-Prints all the elements of a linked list.
  *@h:Pointer to the list to be printed.
  *Return:Total number of nodes.
  */
