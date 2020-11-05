@@ -12,7 +12,7 @@ unsigned int binary_to_uint(const char *b)
 	int n = _strlen(b);
 	unsigned int myint = 0;
 
-	if (b == NULL)
+	if (b == NULL || n == 0)
 		return (0);
 	for (i = (n - 1); i >= 0; i--)
 	{
@@ -50,7 +50,7 @@ int _strlen(const char *s)
  *@exponent:The power to raise to.
  *Return:The base power exponent.
  */
-int power(int base, int exponent)
+int power(int base, long int exponent)
 {
 	int j;
 	int result = 1;

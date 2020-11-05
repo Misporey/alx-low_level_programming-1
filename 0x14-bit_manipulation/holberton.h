@@ -3,6 +3,6 @@
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
 int _strlen(const char *s);
-int power(int base, int exponent);
+int power(int base, long int exponent);
 
 #endif
