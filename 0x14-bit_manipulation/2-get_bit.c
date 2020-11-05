@@ -9,8 +9,10 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 	char *p = decToBinary(n);
-	char bit = *(p + index);
+	int bit = (int) *(p + index);
 
+	if ((bit != 1 && bit !=  0) || index > 64)
+		return (-1);
 	return (bit);
 }
 /**
