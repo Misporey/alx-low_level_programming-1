@@ -13,6 +13,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *new_node;
 	char *value_c;
+	unsigned long int i;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
@@ -28,6 +29,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (value_c == NULL)
 		return (0);
+
+	for (i = index; ht->array[i]; i++)
+	{
+		if (strcmp(ht->array[i]->key, key) == 0)
+		{
+			free(ht->array[i]->value);
+			ht->array[i]->value = value_c;
+			return (1);
+		}
+	}
+
+
+
 
 	/*Assign values to the new node*/
 	new_node->value = value_c;
