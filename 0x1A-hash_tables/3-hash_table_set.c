@@ -10,40 +10,23 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *new_node;
-	char *value_c;
+	unsigned long int size, index;
 
-	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+	if (ht == NULL || key == NULL)
 		return (0);
-
-	new_node = malloc(sizeof(hash_node_t));
-	value_c = strdup(value);
-
-	if (new_node == NULL)
+	size = ht->size;
+	index = key_index((const unsigned char *)key, size);
+	if (ht->array[index] != NULL && strcmp(ht->array[index]->key, key) == 0)
 	{
-		free(value_c);
-		return (0);
-	}
-
-	if (value_c == NULL)
-		return (0);
-
-	/*Assign values to the new node*/
-	new_node->value = value_c;
-	new_node->key = strdup(key);
-	new_node->next = NULL;
-
-	if (new_node->key == NULL)
-	{
-		free(new_node);
-		return (0);
-	}
-	if (strcmp(ht->array[index]->key, key) == 0)
-	{
-		ht->array[index]->value = value_c;
+		ht->array[index]->value = strdup(value);
 		return (1);
 	}
+	new_node = malloc(sizeof(hash_node_t));
+	if (new_node == NULL)
+		return (0);
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 	return (1);
