@@ -17,11 +17,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 	}
 
-	if (strcmp(ht->array[index]->key, key) == 0)
-		return (ht->array[index]->value);
 	while (1)
 	{
-		if (strcmp(ht->array[index]->key, key) == 0)
+		if (strcmp(ht->array[index]->key, strdup(key)) == 0)
 			return (ht->array[index]->value);
 		ht->array[index] = ht->array[index]->next;
 	}
