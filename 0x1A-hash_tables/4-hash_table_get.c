@@ -25,13 +25,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	else
 	{
 
-	while (1)
-	{
-		if (tmp != NULL && strcmp(tmp->key, strdup(key)) == 0)
-			return (tmp->value);
-		tmp = tmp->next;
+		while (strcmp(strdup(key), tmp->key) != 0)
+			tmp = tmp->next;
 		if (tmp == NULL)
 			return (NULL);
-	}
+		else
+			return (tmp->value);
 	}
 }
