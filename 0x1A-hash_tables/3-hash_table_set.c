@@ -45,6 +45,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new_node;
 		return (1);
 	}
+	if (strcmp(ht->array[index]->key, key) == 0)
+	{
+		free(ht->array[index]->value);
+		ht->array[index]->value = value_c;
+		return (1);
+	}
+
 	ht->array[index] = new_node;
 	return (1);
 }
