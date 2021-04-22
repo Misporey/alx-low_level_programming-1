@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <stdio.h>
 /**
  *jump_search - Searches for a value in a sorted array of integers.
  *@array:Pointer ot the first element of the array to search.
@@ -10,8 +11,8 @@
 int jump_search(int *array, size_t size, int value)
 {
 	size_t i;
-	int jump;
-	int step;
+	size_t jump;
+	size_t step;
 
 	if (array == NULL || size == 0)
 		return (-1);
