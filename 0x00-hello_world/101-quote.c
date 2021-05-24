@@ -2,11 +2,12 @@
 /**
  *main-program entry point.
  *
- *Return: zero if no error, non-zero int if error.
+ *Return: 1 on success.
  */
 int main(void)
 {
-	fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-1960\n");
+	fprintf(stderr, "and that piece of art is useful\"");
+	fprintf(stderr, "- Dora Korpar, 2015-10-19\n");
 	return (1);
 
 }
